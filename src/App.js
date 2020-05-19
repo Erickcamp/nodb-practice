@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import './App.css';
 import Button from './components/Button'
+import Header from './components/Header'
 
 class App extends Component  {
   constructor(){
@@ -15,6 +16,7 @@ class App extends Component  {
   render(){
   return (
     <div className="App">
+      <Header />
       {this.state.todos.map(todo => {
         return (<p>{todo}</p>)
       })}

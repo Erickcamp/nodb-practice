@@ -6,6 +6,7 @@ import React, {Component} from 'react'
          this.state = {
             task: ''
          }
+         this.onAdd = this.onAdd.bind(this)
      }
 
      updateTask(task){
@@ -14,10 +15,11 @@ import React, {Component} from 'react'
 
      onAdd(){
          const {task} = this.state
-         const onAddFn = this.props
+         const {onAddFn} = this.props
 
-     onAddFn(task)
+        onAddFn(task)
         this.setState({task: ''})
+        //need to figure out a push to the array. 
      
      }
      render(){
