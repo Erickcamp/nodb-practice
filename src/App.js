@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import './App.css';
+import Button from './components/Button'
 
 class App extends Component  {
   constructor(){
@@ -17,6 +18,7 @@ class App extends Component  {
       {this.state.todos.map(todo => {
         return (<p>{todo}</p>)
       })}
+      <Button onAddFn={this.onAdd}/>
     </div>
     );
   }
